@@ -12,7 +12,7 @@
             padding: 0;
             background: linear-gradient(to right, #001f3f, #003f6f);
             color: #dcdcdc;
-            text-align: center; /* Center-align all text */
+            text-align: center;
         }
 
         header, footer {
@@ -87,27 +87,22 @@
             transform: scale(1.1);
         }
 
-        /* Image Styles */
         .city-image {
             width: 50%;
             border-radius: 10px;
             margin: 1em 0;
-            max-width: 100%; /* Ensure responsiveness */
+            max-width: 100%;
         }
 
-        /* Special Section Styles */
         #special {
-            display: none; /* Hidden initially */
+            display: none;
             animation: fadeIn 1s;
-            background: linear-gradient(to bottom, rgba(139, 0, 0, 0.8), rgba(220, 20, 60, 0.8)); /* Layered gradient */
+            background: linear-gradient(to bottom, rgba(139, 0, 0, 0.8), rgba(220, 20, 60, 0.8));
             color: #ffffff;
             padding: 2em;
             border-radius: 10px;
             margin-top: 1.5em;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            text-align: left;
-            background-image: url('images/carnation.jpg'); /* Add carnation flowers background */
-            background-size: cover;
         }
 
         #special img {
@@ -142,7 +137,6 @@
             <p>Dory is the untouchable princess of all cars! This website is dedicated to sharing her amazing adventures with her parents, Madame Esra, and Sir Aryana. Sporting a sleek dark blue exterior and a personality as vibrant as the ocean she’s named after, Dory is not just any car—she's a symbol of elegance and adventure.</p>
             <img src="IMG_2121.jpeg" alt="Picture of Dory" class="city-image">
             <p>From the moment she graced our driveway, Dory has been the heart and soul of countless road trips and spontaneous drives. Her smooth handling and impeccable performance make every journey a delight, whether we're cruising through city streets or winding mountain roads.</p>
-            <p>Dory isn’t just a car; she's a companion, a protector, and a cherished member of our family. Always eager, always reliable, and forever capturing hearts with her dazzling charm. Future adventures await, and Dory is ready to lead the way, driven by her insatiable curiosity and boundless spirit.</p>
         </section>
         <section id="adventures">
             <h2>Adventures</h2>
@@ -163,54 +157,34 @@
             </ul>
             <button class="button" onclick="showSpecialSection()">Click Here for a Surprise! 🚗💕</button>
         </section>
-        <section id="special" class="proposal-section">
+        <section id="special">
             <h2>Us.</h2>
             <div style="display: flex; justify-content: center; flex-wrap: wrap;">
-                <!-- Add your image paths here -->
                 <div>
-                    <h3>My favourite picture of us.</h3>
+                    <h3>My favorite picture of us.</h3>
                     <img src="Shiraz.jpg.webp" alt="Special Moment 1">
                 </div>
                 <div>
-                    <h3>Donovan and Limu were so young when they left us...</h3>
-                    <img src="Shiraz.jpg.webp" alt="Special Moment 2">
-                </div>
-                <div>
-                    <h3>I always somehow end up smiling when I'm with you.</h3>
-                    <img src="Shiraz.jpg.webp" alt="Special Moment 3">
-                </div>
-                <div>
-                    <h3>YOU SKIPPED THE ROCK!!!</h3>
-                    <img src="Shiraz.jpg.webp" alt="Special Moment 4">
-                </div>
-                <div>
                     <h3>Moments before I witnessed your Turkish fury for the first time.</h3>
-                    <img src="Shiraz.jpg.webp" alt="Special Moment 5">
-                </div>
-                <div>
-                    <h3>YOUR FIRST TIME MEETING THE RICKSTER!</h3>
-                    <img src="Shiraz.jpg.webp" alt="Special Moment 6">
-                </div>
-                <div>
-                    <h3>My favourite picture of you.</h3>
-                    <img src="Shiraz.jpg.webp" alt="Special Moment 7">
-                </div>
-                <div>
-                    <h3>My favourite day with you.</h3>
-                    <img src="Shiraz.jpg.webp" alt="Special Moment 8">
+                    <img src="Ankara.jpg" alt="Special Moment 2">
                 </div>
             </div>
             <p>I cherish all these memories we've made, which is why I have something to ask...</p>
         </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>If you want to know more about Dory or share your own car adventures, feel free to reach out!</p>
-            <form onsubmit="submitForm(event)">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+    </main>
+    <footer>
+        <p>&copy; 2025 Dory's Adventures. All rights reserved.</p>
+    </footer>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-               [_{{{CITATION{{{_1{](https://github.com/buribalazs/smooth-drag-order/tree/7b40d21d076c3e31765f61481f537beaf4c5ec9f/README.md)[_{{{CITATION{{{_2{](https://github.com/CarlNierves/CarlNierves.github.io/tree/faf325f68517f148ef66653d9dbd3488d7e85b91/index.php)
+    <script>
+        function showSpecialSection() {
+            const specialSection = document.getElementById('special');
+            if (specialSection) {
+                specialSection.style.display = 'block';
+            } else {
+                console.error('Special section not found!');
+            }
+        }
+    </script>
+</body>
+</html>
