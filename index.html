@@ -61,7 +61,6 @@
             margin-bottom: 1.5em;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
             width: 80%;
-            text-align: center;
             max-width: 800px;
         }
 
@@ -96,6 +95,7 @@
 
         form {
             margin-top: 1em;
+            text-align: center;
         }
 
         form label {
@@ -107,6 +107,8 @@
 
         form input, form textarea {
             width: 100%;
+            max-width: 500px; /* control the max width */
+            margin: 0 auto; /* center-align the input fields */
             padding: 10px;
             margin-top: 5px;
             border: 1px solid #66ccff;
@@ -114,6 +116,7 @@
             font-size: 14px;
             background: #003f7f;
             color: #ffffff;
+            display: block;
         }
 
         form input:focus, form textarea:focus {
@@ -123,6 +126,7 @@
 
         form input[type="submit"] {
             width: auto;
+            max-width: 200px;
             background: #66ccff;
             color: #002b5c;
             border: none;
@@ -130,6 +134,7 @@
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s;
+            margin: 10px auto; /* center-align the submit button */
         }
 
         form input[type="submit"]:hover {
@@ -141,6 +146,7 @@
             width: 50%;
             border-radius: 10px;
             margin: 1em 0;
+            max-width: 100%; /* Ensure responsiveness */
         }
     </style>
 </head>
@@ -151,7 +157,6 @@
     <nav>
         <a href="#about">About Dory</a>
         <a href="#adventures">Adventures</a>
-        <a href="#contact">Contact</a>
     </nav>
     <main>
         <section id="about">
@@ -179,15 +184,31 @@
                 </li>
             </ul>
         </section>
-        <section id="contact"> 
-            <h2>Contact</h2> <p>If you want to know more about Dory or share your own car adventures, feel free to reach out!</p>
-            <form onsubmit="submitForm(event)"> 
-                <label for="name">Name:</label> 
-                <input type="text" id="name" name="name" required> 
-                <label for="email">Email:</label> 
-                <input type="email" id="email" name="email" required> 
-                <label for="message">Message:</label> 
-                <textarea id="message" name="message" rows="4" required></textarea> 
-                <input type="submit" value="Submit"> </form> </section> </main> <footer> 
-                    <p>&copy; 2025 Dory's Adventures</p> </footer> <script> function submitForm(event) { event.preventDefault(); alert('Thank you for your message! We will get back to you soon.'); }
-                    </script>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>If you want to know more about Dory or share your own car adventures, feel free to reach out!</p>
+            <form onsubmit="submitForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Dory's Adventures</p>
+    </footer>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+        }
+    </script>
+</body>
+</html>
