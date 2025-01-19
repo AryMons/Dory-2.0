@@ -12,14 +12,11 @@
             padding: 0;
             background: linear-gradient(to right, #001f3f, #003f6f);
             color: #dcdcdc;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            text-align: center; /* Center-align all text */
         }
 
         header, footer {
             width: 100%;
-            text-align: center;
             padding: 1.5em 0;
             background: linear-gradient(to right, #002b5c, #003f7f);
             color: #ffffff;
@@ -50,10 +47,10 @@
 
         main {
             padding: 2em;
-            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
         }
 
         section {
@@ -141,9 +138,9 @@
 
         /* Image Styles */
         .city-image {
-            width: 80%;
+            width: 50%;
             border-radius: 10px;
-            margin-bottom: 1em;
+            margin: 1em 0;
         }
     </style>
 </head>
@@ -167,44 +164,19 @@
         <section id="adventures">
             <h2>Adventures</h2>
             <p>Here are some of the exciting places Dory intends to visit:</p>
-            <ul style="text-align:left;">
-                <li>Shiraz, Iran</li>
-                <img src="Shiraz.jpg.webp" alt="Shiraz" class="city-image">
-                <li>Ankara, Turkiye</li>
-                <img src="Ankara.jpg" alt="Ankara" class="city-image">
-                <li>Berlin, Germany</li>
-                <img src="Berlin.jpg" alt="Berlin" class="city-image">
+            <ul style="list-style-type: none; padding: 0;">
+                <li>
+                    <h3>Shiraz, Iran</h3>
+                    <img src="Shiraz.jpg.webp" alt="Shiraz" class="city-image">
+                </li>
+                <li>
+                    <h3>Ankara, Turkiye</h3>
+                    <img src="Ankara.jpg" alt="Ankara" class="city-image">
+                </li>
+                <li>
+                    <h3>Berlin, Germany</h3>
+                    <img src="Berlin.jpg" alt="Berlin" class="city-image">
+                </li>
             </ul>
         </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>If you want to know more about Dory or share your own car adventures, feel free to reach out!</p>
-            <form onsubmit="submitForm(event)">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <input type="submit" value="Submit">
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Dory's Adventures</p>
-    </footer>
-    <script>
-        function submitForm(event) {
-            event.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-        }
-    </script>
-</body>
-</html>
-
-<img src="images/shiraz.jpg" alt="Shiraz" class="city-image">
-<img src="images/ankara.jpg" alt="Ankara" class="city-image">
-<img src="images/berlin.jpg" alt="Berlin" class="city-image">
+        <section id="contact
