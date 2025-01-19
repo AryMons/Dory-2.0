@@ -61,6 +61,7 @@
             margin-bottom: 1.5em;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
             width: 80%;
+            text-align: center;
             max-width: 800px;
         }
 
@@ -95,7 +96,7 @@
 
         form {
             margin-top: 1em;
-            text-align: center;
+            text-align: center; /* Center-align form */
         }
 
         form label {
@@ -107,8 +108,9 @@
 
         form input, form textarea {
             width: 100%;
-            max-width: 500px; /* control the max width */
-            margin: 0 auto; /* center-align the input fields */
+            max-width: 500px; /* Control max-width for alignment */
+            display: block;
+            margin: 0 auto; /* Center inputs */
             padding: 10px;
             margin-top: 5px;
             border: 1px solid #66ccff;
@@ -116,7 +118,6 @@
             font-size: 14px;
             background: #003f7f;
             color: #ffffff;
-            display: block;
         }
 
         form input:focus, form textarea:focus {
@@ -126,7 +127,7 @@
 
         form input[type="submit"] {
             width: auto;
-            max-width: 200px;
+            max-width: 200px; /* Control max-width for alignment */
             background: #66ccff;
             color: #002b5c;
             border: none;
@@ -134,7 +135,7 @@
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s;
-            margin: 10px auto; /* center-align the submit button */
+            margin: 10px auto; /* Center-align the submit button */
         }
 
         form input[type="submit"]:hover {
@@ -147,6 +148,23 @@
             border-radius: 10px;
             margin: 1em 0;
             max-width: 100%; /* Ensure responsiveness */
+        }
+
+        /* Proposal Section Styles */
+        .proposal-section {
+            display: none; /* Hidden by default */
+            animation: fadeIn 1s;
+            background: #003f7f;
+            color: #ffffff;
+            padding: 2em;
+            border-radius: 10px;
+            margin-top: 1.5em;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
@@ -183,6 +201,13 @@
                     <img src="Berlin.jpg.webp" alt="Berlin" class="city-image">
                 </li>
             </ul>
+            <button class="button" onclick="revealProposal()">Click Here for a Surprise! 🚗💕</button>
+        </section>
+        <section id="proposal" class="proposal-section">
+            <h2>Will You Be My Girlfriend?</h2>
+            <p>I planned this entire website about Dory to lead up to this very moment. You mean the world to me, and I couldn't think of a more special way to ask you...</p>
+            <p>Will you be my partner, my confidant, my everything?</p>
+            <button class="button" onclick="alert('She said yes! 🎉')">Yes</button>
         </section>
         <section id="contact">
             <h2>Contact</h2>
@@ -205,10 +230,11 @@
         <p>&copy; 2025 Dory's Adventures</p>
     </footer>
     <script>
+        function revealProposal() {
+            var proposalSection = document.getElementById('proposal');
+            proposalSection.style.display = 'block';
+        }
+
         function submitForm(event) {
             event.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-        }
-    </script>
-</body>
-</html>
+            alert('Thank you[_{{{CITATION{{{_1{](https://github.com/CarlNierves/CarlNierves.github.io/tree/faf325f68517f148ef66653d9dbd3488d7e85b91/index.php)
