@@ -201,27 +201,11 @@
         <p>&copy; 2025 Dory's Adventures. All rights reserved.</p>
     </footer>
 
-    <script>
+   <script>
         function showSpecialSection() {
             const specialSection = document.getElementById('special');
             if (specialSection) {
                 specialSection.style.display = 'block';
-
-                // Add carnation and hydrangea flowers dynamically
-                const flowerImages = [
-                    { src: 'carnation.jpg', alt: 'Carnation Flower' },
-                    { src: 'hydrangea.jpg', alt: 'Hydrangea Flower' }
-                ];
-
-                flowerImages.forEach(flower => {
-                    const img = document.createElement('img');
-                    img.src = flower.src;
-                    img.alt = flower.alt;
-                    img.style.width = '20%';
-                    img.style.margin = '10px';
-                    img.style.borderRadius = '10px';
-                    specialSection.appendChild(img);
-                });
             } else {
                 console.error('Special section not found!');
             }
