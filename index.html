@@ -71,19 +71,22 @@
         }
 
         .button {
-            background-color: #005a9c;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0, 90, 156, 0.8);
             border: none;
             color: #ffffff;
             padding: 10px 25px;
-            font-size: 16px;
-            margin: 10px 0;
+            font-size: 14px;
             cursor: pointer;
             border-radius: 12px;
-            transition: all 0.3s;
+            opacity: 0.7;
+            transition: opacity 0.3s, transform 0.3s;
         }
 
         .button:hover {
-            background-color: #003f7f;
+            opacity: 1;
             transform: scale(1.1);
         }
 
@@ -95,6 +98,10 @@
         }
 
         #special {
+            background-image: url('carnation.png'), url('hydrangea.png');
+            background-size: 150px, 200px;
+            background-repeat: no-repeat, no-repeat;
+            background-position: left bottom, right top;
             display: none;
             animation: fadeIn 1s;
             background: linear-gradient(to bottom, rgba(139, 0, 0, 0.8), rgba(220, 20, 60, 0.8));
@@ -104,13 +111,13 @@
             margin-top: 1.5em;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
-    
-    #special img {
-        width: 45%; /* Increased size */
-        border-radius: 10px;
-        margin: 15px;
-        max-width: 100%;
-    }
+
+        #special img {
+            width: 45%;
+            border-radius: 10px;
+            margin: 15px;
+            max-width: 100%;
+        }
 
         #special p {
             font-size: 1.2em;
@@ -157,84 +164,90 @@
                     <img src="Berlin.jpg.webp" alt="Berlin" class="city-image">
                 </li>
             </ul>
-            <button class="button" onclick="showSpecialSection()">Click Here for a Surprise! 🚗💕</button>
         </section>
         <section id="special">
             <h2>Us.</h2>
             <div style="display: flex; justify-content: center; flex-wrap: wrap;">
-                <div>
-                    <h3>My favourite picture of us.</h3>
-                    <img src="IMG_2097.HEIC" alt="Special Moment 1">
-                </div>
-                <div>
-                    <h3>Donovan and Limu were so young when they left us :'(</h3>
-                    <img src="IMG_3716.jpeg" alt="Special Moment 2">
-                </div>
-                <div>
-                    <h3>I always somehow end up smiling when I'm with you.</h3>
-                    <img src="IMG_2154.jpeg" alt="Special Moment 3">
-                </div>
-                <div>
-                    <h3>YOU SKIPPED THE ROCK!!!</h3>
-                    <img src="IMG_2396.GIF" alt="Special Moment 4">
-                </div>
-                <div>
-                    <h3>Moments before I witnessed your Turkish fury for the first time.</h3>
-                    <img src="IMG_2389.jpeg" alt="Special Moment 5">
-                </div>
-                <div>
-                    <h3>YOUR FIRST TIME MEETING THE RICKSTER!(and my face getting gobsmacked by a billboard [NOT A POSTER])</h3>
-                    <img src="IMG_2405.GIF" alt="Special Moment 6">
-                </div>
-                <div>
-                    <h3>My favourite picture of you.</h3>
-                    <img src="IMG_2185.jpeg" alt="Special Moment 7">
-                </div>
-                <div>
-                    <h3>My favourite day with you.</h3>
-                    <img src="IMG_2311.HEIC" alt="Special Moment 8">
-                </div>
-                <div>
-                    <h3>First mirror selfie🫣</h3>
-                    <img src="IMG_2393.JPG" alt="Special Moment 9">
-                </div>
-                 <div>
-                    <h3>YOU MAKE ME AFRAID OF NOTHING!</h3>
-                    <img src="IMG_2398.JPG" alt="Special Moment 10">
-                </div>
-                 <div>
-                    <h3>Modern day Romeo and Juliet.</h3>
-                    <img src="IMG_2406.GIF" alt="Special Moment 11">
-                </div>
-                 <div>
-                    <h3>Modern day Romeo and Juliet.</h3>
-                    <img src="IMG_2406.GIF" alt="Special Moment 12">
-                </div>
-                 <div>
-                    <h3>Our first drive together!</h3>
-                    <img src="IMG_2404.GIF" alt="Special Moment 13">
-                </div>
-                <div>
-                    <h3>My most peaceful moment at UofT.</h3>
-                    <img src="IMG_2410.JPG" alt="Special Moment 14">
-                </div>
-                <div>
-                    <h3>Your portrait of me.</h3>
-                    <img src="IMG_2401.JPG" alt="Special Moment 15">
-                </div>
-                <div>
-                    <h3>My portrait of you (and your family).</h3>
-                    <img src="IMG_2409.jpg" alt="Special Moment 16">
-                </div>
-                <div>
-                    <h3>Forshadowing of a future with Seker.</h3>
-                    <img src="IMG_2407.jpg" alt="Special Moment 17">
-                </div>
-                <div>
-                    <h3>I want to take so many more of these</h3>
-                    <img src="IMG_2411.JPG" alt="Special Moment 18">
-                    <img src="IMG_2412.JPG" alt="Special Moment 19">
-                </div>
+                <!-- Your 18 images -->
+               <section id="special">
+    <h2>Us.</h2>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+        <div>
+            <h3>My favourite picture of us.</h3>
+            <img src="IMG_2097.HEIC" alt="Special Moment 1">
+        </div>
+        <div>
+            <h3>Donovan and Limu were so young when they left us :'(</h3>
+            <img src="IMG_3716.jpeg" alt="Special Moment 2">
+        </div>
+        <div>
+            <h3>I always somehow end up smiling when I'm with you.</h3>
+            <img src="IMG_2154.jpeg" alt="Special Moment 3">
+        </div>
+        <div>
+            <h3>YOU SKIPPED THE ROCK!!!</h3>
+            <img src="IMG_2396.GIF" alt="Special Moment 4">
+        </div>
+        <div>
+            <h3>Moments before I witnessed your Turkish fury for the first time.</h3>
+            <img src="IMG_2389.jpeg" alt="Special Moment 5">
+        </div>
+        <div>
+            <h3>YOUR FIRST TIME MEETING THE RICKSTER!(and my face getting gobsmacked by a billboard [NOT A POSTER])</h3>
+            <img src="IMG_2405.GIF" alt="Special Moment 6">
+        </div>
+        <div>
+            <h3>My favourite picture of you.</h3>
+            <img src="IMG_2185.jpeg" alt="Special Moment 7">
+        </div>
+        <div>
+            <h3>My favourite day with you.</h3>
+            <img src="IMG_2311.HEIC" alt="Special Moment 8">
+        </div>
+        <div>
+            <h3>First mirror selfie🫣</h3>
+            <img src="IMG_2393.JPG" alt="Special Moment 9">
+        </div>
+        <div>
+            <h3>YOU MAKE ME AFRAID OF NOTHING!</h3>
+            <img src="IMG_2398.JPG" alt="Special Moment 10">
+        </div>
+        <div>
+            <h3>Modern day Romeo and Juliet.</h3>
+            <img src="IMG_2406.GIF" alt="Special Moment 11">
+        </div>
+        <div>
+            <h3>Modern day Romeo and Juliet.</h3>
+            <img src="IMG_2406.GIF" alt="Special Moment 12">
+        </div>
+        <div>
+            <h3>Our first drive together!</h3>
+            <img src="IMG_2404.GIF" alt="Special Moment 13">
+        </div>
+        <div>
+            <h3>My most peaceful moment at UofT.</h3>
+            <img src="IMG_2410.JPG" alt="Special Moment 14">
+        </div>
+        <div>
+            <h3>Your portrait of me.</h3>
+            <img src="IMG_2401.JPG" alt="Special Moment 15">
+        </div>
+        <div>
+            <h3>My portrait of you (and your family).</h3>
+            <img src="IMG_2409.jpg" alt="Special Moment 16">
+        </div>
+        <div>
+            <h3>Forshadowing of a future with Seker.</h3>
+            <img src="IMG_2407.jpg" alt="Special Moment 17">
+        </div>
+        <div>
+            <h3>I want to take so many more of these</h3>
+            <img src="IMG_2411.JPG" alt="Special Moment 18">
+            <img src="IMG_2412.JPG" alt="Special Moment 19">
+        </div>
+    </div>
+    <p>I cherish all these memories we've made, which is why I have something to ask...</p>
+</section>
             </div>
             <p>I cherish all these memories we've made, which is why I have something to ask...</p>
         </section>
@@ -242,6 +255,8 @@
     <footer>
         <p>&copy; 2025 Dory's Adventures. All rights reserved.</p>
     </footer>
+
+    <button class="button" onclick="showSpecialSection()">Secret 🚗💕</button>
 
     <script>
         function showSpecialSection() {
