@@ -109,6 +109,11 @@
             background-repeat: no-repeat;
             background-size: 250px 250px, 250px 250px;
         }
+        .big-black-heading {
+            font-size: 3em;
+            color: black;
+            font-weight: bold;
+        }
 
         #special img {
             width: 45%;
@@ -186,8 +191,9 @@
             </ul>
             <button class="button" onclick="showSpecialSection()">Click Here for a Surprise! 🚗💕</button>
         </section>
-        <section id="special">
-            <h2>Us.</h2>
+            <section id="special">
+            <h2 id="us-heading">Us.</h2>
+            <div style="display: flex; justify-content: center; flex-wrap: wrap;">
              <div>
             <h3>My favourite picture of us.</h3>
             <img src="IMG_2097.HEIC" alt="Special Moment 1">
@@ -279,6 +285,7 @@
             } else {
                 body.classList.remove('color-change'); // Optional, allows toggling back
             }
+         heading.classList.add('big-black-heading');
         }
     </script>
 </body>
