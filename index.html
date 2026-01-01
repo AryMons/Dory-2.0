@@ -61,9 +61,8 @@
             color: #dcdcdc;
             margin-bottom: 1.5em;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            width: 80%;
-            text-align: center;
-            max-width: 800px;
+            width: 100%;
+            max-width: 1200px;
         }
 
         section h2 {
@@ -229,6 +228,7 @@
         .multi-image img {
           height: 150px; /* Smaller height for multiple images */
           max-width: 48%;
+        }
 
         #lightbox {
           display: none;
@@ -286,9 +286,16 @@
       border-radius: 12px;
       object-fit: cover; /* Trims edges if needed to fill space better */
     }
+        
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
   </style>
 <body>
+    <div class="container">
     <header>
         <h1>Dory: The Ultimate Princess of CarKind!</h1>
     </header>
@@ -490,24 +497,22 @@
           }
         
           function openImage(img) {
-            const lightboxImg = document.getElementById("lightbox-img");
             const lightbox = document.getElementById("lightbox");
-        
-            lightboxImg.src = img.src;
+            const lightboxImg = document.getElementById("lightbox-img");
             lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
           }
         
           function closeImage() {
             document.getElementById("lightbox").style.display = "none";
           }
-        
-          // Automatically add openImage to every image in the gallery
-          document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll(".memory img").forEach(img => {
-              img.addEventListener("click", () => openImage(img));
-            });
-          });
         </script>
+        
+        <div id="lightbox" onclick="closeImage()">
+          <img id="lightbox-img">
+        </div>
+
+    </div>
 
 </body>
 </html>
