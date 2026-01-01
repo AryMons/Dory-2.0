@@ -202,25 +202,22 @@
         }
         
         .memory {
-          background-color: #1f1f1f;
-          border-radius: 12px;
-          overflow: hidden;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          cursor: pointer;
+          background: #1e1e1e;
+          padding: 15px;
+          border-radius: 15px;
+          text-align: center;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          min-height: 400px; /* 👈 Helps balance tall and short image blocks */
+          align-items: center;
         }
-        
+
         .memory img {
           width: 100%;
-          height: 550px; /* 👈 Forcing consistent image height */
-          object-fit: cover; /* 👈 Makes all images fill their space without stretching */
-          border-radius: 12px 12px 0 0;
-          display: block;
+          height: 250px;
+          object-fit: cover;
+          border-radius: 10px;
         }
-        
+
         .multi-image img {
           height: 150px; /* Smaller height for multiple images */
           max-width: 48%;
@@ -237,7 +234,8 @@
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
+      gap: 30px;
+      padding: 20px;
     }
 
     .memory {
