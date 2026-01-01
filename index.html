@@ -218,8 +218,13 @@
 
     .memory img {
       width: 100%;
+      max-height: 400px; /* Optional: Limit tall photos */
+      height: auto;
       display: block;
+      border-radius: 12px;
+      object-fit: cover; /* Trims edges if needed to fill space better */
     }
+
   </style>
 <body>
     <header>
