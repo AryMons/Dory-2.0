@@ -155,33 +155,35 @@
             color: #fff;
         }
 
-        .video-section {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 40px;
-          margin: 80px auto;
+        #videos {
+          padding: 60px 40px;
+          background: #07182e; /* or any cool section background */
+          margin-top: 40px;
+          border-radius: 20px;
+          text-align: center;
+        }
+        
+        .video-heading {
+          color: #00ffff;
+          font-size: 2rem;
+          margin-bottom: 20px;
         }
         
         .video-wrapper {
-          position: relative;
-          padding-bottom: 56.25%; /* 16:9 aspect ratio */
-          height: 0;
-          width: 90%;
-          max-width: 800px;
-          border-radius: 12px;
-          overflow: hidden;
-          box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 40px;
         }
         
         .video-wrapper iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
+          width: 360px;
+          height: 215px;
+          border-radius: 12px;
           border: none;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
+
 
         .multi-image {
           display: flex;
@@ -417,17 +419,14 @@
                 <div class="memory"><img src="IMG_3295.JPG"><div class="caption">Even when making puffer fish faces, she poses</div></div>
                 <div class="memory"><img src="IMG_3153.HEIC"><div class="caption">She's sooooo pretty</div></div>
               
-    <section class="video-section">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/aEh3CJdhCHM" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/RjUL3eoOvGg" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/DjDM-j6Yoyc" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </section>
+       <section id="videos">
+          <h2 class="video-heading">Watch These 🎥</h2>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/aEh3CJdhCHM" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/RjUL3eoOvGg" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/DjDM-j6Yoyc" allowfullscreen></iframe>
+          </div>
+        </section>
                 
         </section>
     </main>
