@@ -177,18 +177,28 @@
         }
         
         .memory {
-          position: relative;
+          background-color: #1f1f1f;
+          border-radius: 12px;
+          overflow: hidden;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          min-height: 400px; /* 👈 Helps balance tall and short image blocks */
         }
         
-        .multi-image::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 40px;
-          background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-          pointer-events: none;
+        .memory img {
+          width: 100%;
+          height: 300px; /* 👈 Forcing consistent image height */
+          object-fit: cover; /* 👈 Makes all images fill their space without stretching */
+          border-radius: 12px 12px 0 0;
+          display: block;
+        }
+        
+        .multi-image img {
+          height: 150px; /* Smaller height for multiple images */
+          max-width: 48%;
         }
 
     </style>
