@@ -204,24 +204,32 @@
         }
         
       .memory {
-          background-color: #1f1f1f;
+          background: #1e1e1e;
+          padding: 15px;
+          border-radius: 15px;
+          text-align: center;
           border-radius: 12px;
           overflow: hidden;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          cursor: pointer;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          min-height: 400px; /* 👈 Helps balance tall and short image blocks */
+          align-items: center;
+          height: 100%; /* let the grid handle alignment */
         }
         
         .memory img {
+          height: 300px;           /* or any size you want */
+          width: 100%;             /* makes it fill the memory block width */
+          object-fit: cover;       /* ✅ keeps the aspect ratio, crops if needed */
+          border-radius: 10px;     /* optional: makes corners smooth */
           width: 100%;
-          height: 300px; /* 👈 Forcing consistent image height */
-          object-fit: cover; /* 👈 Makes all images fill their space without stretching */
-          border-radius: 12px 12px 0 0;
+          height: 300px;              /* FIXED HEIGHT FOR ALL IMAGES */
+          object-fit: cover;          /* Crop to fit box without stretching */
           display: block;
         }
+
+        .multi-image img {
+          height: 150px; /* Smaller height for multiple images */
+          max-width: 48%;
                 
     </style>
 </head>
