@@ -165,14 +165,32 @@
           flex-wrap: wrap;
           gap: 10px;
           justify-content: center;
+          max-height: 400px; /* 👈 Limit the visible height */
+          overflow-y: auto;  /* 👈 Enables scroll inside the block */
         }
-        
+
         .multi-image img {
           width: 100%;
           max-width: 48%;
           border-radius: 8px;
           object-fit: cover;
         }
+        
+        .memory {
+          position: relative;
+        }
+        
+        .multi-image::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 40px;
+          background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+          pointer-events: none;
+        }
+
     </style>
 </head>
     <style>
