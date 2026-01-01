@@ -231,15 +231,15 @@
           max-width: 48%;
 
         #lightbox {
+          display: none;
           position: fixed;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          background: rgba(0,0,0,0.85);
-          display: none;
-          align-items: center;
+          background: rgba(10, 10, 10, 0.85); /* dark blur feel */
           justify-content: center;
+          align-items: center;
           z-index: 1000;
           cursor: zoom-out;
         }
@@ -247,9 +247,11 @@
         #lightbox img {
           max-width: 90%;
           max-height: 90%;
-          border-radius: 12px;
+          box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+          border-radius: 8px;
+          transition: transform 0.3s ease;
         }
-            
+
     </style>
 </head>
     <style>
@@ -459,39 +461,53 @@
         <p>&copy; 2025 Dory's Adventures. All rights reserved.</p>
     </footer>
 
-    <script>
-        function showSpecialSection() {
+    <!-- Lightbox Overlay -->
+        <div id="lightbox" onclick="closeImage()">
+          <img id="lightbox-img">
+        </div>
+        
+        <script>
+          function showSpecialSection() {
             const specialSection = document.getElementById('special');
             const body = document.body;
-
+            const heading = document.getElementById('us-heading'); // ← make sure this exists!
+        
             if (specialSection) {
-                specialSection.style.display = 'block';
+              specialSection.style.display = 'block';
             }
-
-            // Toggle the color-change class on the body
+        
+            // Toggle body color class
             if (!body.classList.contains('color-change')) {
-                body.classList.add('color-change');
+              body.classList.add('color-change');
             } else {
-                body.classList.remove('color-change'); // Optional, allows toggling back
+              body.classList.remove('color-change');
             }
-         heading.classList.add('big-black-heading');
-        }
-    </script>
-    
-    <div id="lightbox" onclick="closeImage()">
-      <img id="lightbox-img">
-    </div>
-   
-    <script>
-      function openImage(img) {
-        document.getElementById("lightbox-img").src = img.src;
-        document.getElementById("lightbox").style.display = "flex";
-      }
-    
-      function closeImage() {
-        document.getElementById("lightbox").style.display = "none";
-      }
-    </script>
+        
+            // Add heading style
+            if (heading) {
+              heading.classList.add('big-black-heading');
+            }
+          }
+        
+          function openImage(img) {
+            const lightboxImg = document.getElementById("lightbox-img");
+            const lightbox = document.getElementById("lightbox");
+        
+            lightboxImg.src = img.src;
+            lightbox.style.display = "flex";
+          }
+        
+          function closeImage() {
+            document.getElementById("lightbox").style.display = "none";
+          }
+        
+          // Automatically add openImage to every image in the gallery
+          document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".memory img").forEach(img => {
+              img.addEventListener("click", () => openImage(img));
+            });
+          });
+        </script>
 
 </body>
 </html>
