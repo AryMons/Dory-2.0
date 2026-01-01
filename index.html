@@ -203,39 +203,26 @@
           object-fit: cover;
         }
         
-      .gallery {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 30px;
-        }
-        
-        .memory {
-          background: #1e1e1e;
+      .memory {
+          background-color: #1f1f1f;
           border-radius: 12px;
           overflow: hidden;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
           display: flex;
           flex-direction: column;
-          height: 100%; /* let the grid handle alignment */
+          justify-content: space-between;
+          min-height: 400px; /* 👈 Helps balance tall and short image blocks */
         }
         
         .memory img {
           width: 100%;
-          height: 300px;              /* FIXED HEIGHT FOR ALL IMAGES */
-          object-fit: cover;          /* Crop to fit box without stretching */
+          height: 300px; /* 👈 Forcing consistent image height */
+          object-fit: cover; /* 👈 Makes all images fill their space without stretching */
+          border-radius: 12px 12px 0 0;
           display: block;
         }
-        
-        .caption {
-          color: #00ffff;
-          text-align: center;
-          padding: 10px;
-          flex-grow: 1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-weight: 500;
-        }
-        
+                
     </style>
 </head>
     <style>
