@@ -229,7 +229,27 @@
         .multi-image img {
           height: 150px; /* Smaller height for multiple images */
           max-width: 48%;
-                
+
+        #lightbox {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0,0,0,0.85);
+          display: none;
+          align-items: center;
+          justify-content: center;
+          z-index: 1000;
+          cursor: zoom-out;
+        }
+        
+        #lightbox img {
+          max-width: 90%;
+          max-height: 90%;
+          border-radius: 12px;
+        }
+            
     </style>
 </head>
     <style>
@@ -303,126 +323,126 @@
           <section id="special">
           <h2 id="us-heading">Us.</h2>
           <div class="gallery">
-                <div class="memory"><img src="IMG_2097.HEIC"><div class="caption">My favourite picture of us.</div></div>
-                <div class="memory"><img src="IMG_3716.jpeg"><div class="caption">Landon and Limu were so young when they left us 😢</div></div>
-                <div class="memory"><img src="IMG_2154.jpeg"><div class="caption">We always laugh when we're together</div></div>
-                <div class="memory"><img src="IMG_2396.GIF"><div class="caption">YOU SKIPPED THE ROCK!!!</div></div>
-                <div class="memory"><img src="IMG_2389.jpeg"><div class="caption">Moments before I witnessed your Turkish fury for the first time.</div></div>
-                <div class="memory"><img src="IMG_2405.GIF"><div class="caption">YOUR FIRST TIME MEETING THE RICKSTER!</div></div>
-                <div class="memory"><img src="IMG_2185.jpeg"><div class="caption">My favourite picture of you.</div></div>
-                <div class="memory"><img src="IMG_2311.HEIC"><div class="caption">My favourite day with you.</div></div>
-                <div class="memory"><img src="IMG_2393.JPG"><div class="caption">First mirror selfie 🫣</div></div>
-                <div class="memory"><img src="IMG_2398.JPG"><div class="caption">YOU MAKE ME AFRAID OF NOTHING!</div></div>
-                <div class="memory"><img src="IMG_2406.GIF"><div class="caption">Modern day Romeo and Juliet.</div></div>
-                <div class="memory"><img src="IMG_2404.GIF"><div class="caption">Our first drive together!</div></div>
-                <div class="memory"><img src="IMG_2410.JPG"><div class="caption">My most peaceful moment at UofT.</div></div>
-                <div class="memory"><img src="IMG_2401.JPG"><div class="caption">Your portrait of me.</div></div>
-                <div class="memory"><img src="IMG_2409.jpg"><div class="caption">My portrait of you (and your family).</div></div>
-                <div class="memory"><img src="IMG_2407.jpg"><div class="caption">Foreshadowing of a future with Seker.</div></div>
-                <div class="memory"><img src="IMG_2001.jpeg"><div class="caption">A curious bunch</div></div>
+                <div class="memory"><img src="IMG_2097.HEIC" onclick="openImage(this)"><div class="caption">My favourite picture of us.</div></div>
+                <div class="memory"><img src="IMG_3716.jpeg" onclick="openImage(this)"><div class="caption">Landon and Limu were so young when they left us 😢</div></div>
+                <div class="memory"><img src="IMG_2154.jpeg" onclick="openImage(this)"><div class="caption">We always laugh when we're together</div></div>
+                <div class="memory"><img src="IMG_2396.GIF" onclick="openImage(this)"><div class="caption">YOU SKIPPED THE ROCK!!!</div></div>
+                <div class="memory"><img src="IMG_2389.jpeg" onclick="openImage(this)"><div class="caption">Moments before I witnessed your Turkish fury for the first time.</div></div>
+                <div class="memory"><img src="IMG_2405.GIF" onclick="openImage(this)"><div class="caption">YOUR FIRST TIME MEETING THE RICKSTER!</div></div>
+                <div class="memory"><img src="IMG_2185.jpeg" onclick="openImage(this)"><div class="caption">My favourite picture of you.</div></div>
+                <div class="memory"><img src="IMG_2311.HEIC"onclick="openImage(this)"><div class="caption">My favourite day with you.</div></div>
+                <div class="memory"><img src="IMG_2393.JPG"onclick="openImage(this)"><div class="caption">First mirror selfie 🫣</div></div>
+                <div class="memory"><img src="IMG_2398.JPG"onclick="openImage(this)"><div class="caption">YOU MAKE ME AFRAID OF NOTHING!</div></div>
+                <div class="memory"><img src="IMG_2406.GIF"onclick="openImage(this)"><div class="caption">Modern day Romeo and Juliet.</div></div>
+                <div class="memory"><img src="IMG_2404.GIF"onclick="openImage(this)"><div class="caption">Our first drive together!</div></div>
+                <div class="memory"><img src="IMG_2410.JPG"onclick="openImage(this)"><div class="caption">My most peaceful moment at UofT.</div></div>
+                <div class="memory"><img src="IMG_2401.JPG"onclick="openImage(this)"><div class="caption">Your portrait of me.</div></div>
+                <div class="memory"><img src="IMG_2409.jpg"onclick="openImage(this)"><div class="caption">My portrait of you (and your family).</div></div>
+                <div class="memory"><img src="IMG_2407.jpg"onclick="openImage(this)"><div class="caption">Foreshadowing of a future with Seker.</div></div>
+                <div class="memory"><img src="IMG_2001.jpeg"onclick="openImage(this)"><div class="caption">A curious bunch</div></div>
 
                 <div class="memory">
                   <div class="multi-image">
-                    <img src="IMG_2411.JPG" alt="I want to take so many more of these">
-                    <img src="IMG_2412.JPG" alt="I want to take so many more of these">
-                    <img src="IMG_2418.jpeg" alt="I want to take so many more of these">
-                    <img src="IMG_2464.JPG" alt="I want to take so many more of these">
-                    <img src="IMG_2522.jpeg" alt="I want to take so many more of these">
-                    <img src="IMG_2550.jpeg" alt="I want to take so many more of these">
-                    <img src="IMG_2634.jpeg" alt="I want to take so many more of these">
-                    <img src="IMG_2635.jpeg" alt="I want to take so many more of these">
-                    <img src="IMG_2751.jpeg" alt="I want to take so many more of these">
-                    <img src="IMG_2752.jpeg" alt="I want to take so many more of these">
-                    <img src="IMG_2759 2.JPG" alt="I want to take so many more of these">
-                    <img src="IMG_2901.jpeg" alt="I want to take so many more of these">
-                    <img src="IMG_2902.jpeg" alt="I want to take so many more of these">
-                    <img src="IMG_2903.jpeg" alt="I want to take so many more of these">
-                    <img src="IMG_2961.jpeg" alt="I want to take so many more of these">
-                    <img src="IMG_2962.jpeg" alt="I want to take so many more of these">
-                    <img src="IMG_2963.jpeg" alt="I want to take so many more of these">
-                    <img src="IMG_3281.JPG" alt="I want to take so many more of these">
-                    <img src="IMG_3282.JPG" alt="I want to take so many more of these">
-                    <img src="IMG_3285.JPG" alt="I want to take so many more of these">
-                    <img src="IMG_3286.JPG" alt="I want to take so many more of these">
-                    <img src="IMG_3287.JPG" alt="I want to take so many more of these">
-                    <img src="IMG_3288.JPG" alt="I want to take so many more of these">
-                    <img src="IMG_3289.JPG" alt="I want to take so many more of these">
-                    <img src="IMG_3290.JPG" alt="I want to take so many more of these">
-                    <img src="IMG_3291.JPG" alt="I want to take so many more of these">
-                    <img src="IMG_3296.JPG" alt="I want to take so many more of these">
+                    <img src="IMG_2411.JPG" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2412.JPG" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2418.jpeg" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2464.JPG" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2522.jpeg" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2550.jpeg" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2634.jpeg" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2635.jpeg" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2751.jpeg" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2752.jpeg" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2759 2.JPG" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2901.jpeg" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2902.jpeg" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2903.jpeg" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2961.jpeg" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2962.jpeg" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_2963.jpeg" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_3281.JPG" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_3282.JPG" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_3285.JPG" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_3286.JPG" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_3287.JPG" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_3288.JPG" alt="I want to take so many more of these" onclick="openImage(this)"> 
+                    <img src="IMG_3289.JPG" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_3290.JPG" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_3291.JPG" alt="I want to take so many more of these" onclick="openImage(this)">
+                    <img src="IMG_3296.JPG" alt="I want to take so many more of these" onclick="openImage(this)">
                   </div>
                 
                   <div class="caption">I want to take so many more of these</div>
                 </div>
               
-                <div class="memory"><img src="IMG_8997.jpeg"><div class="caption">IT WORKED!!</div></div>
+                <div class="memory"><img src="IMG_8997.jpeg" onclick="openImage(this)"><div class="caption">IT WORKED!!</div></div>
                 
                 <div class="memory">
                   <div class="multi-image">
-                    <img src="IMG_2527.jpeg" alt="Our First Valentines Together!">
-                    <img src="B5EEDD76-811E-426B-AA7C-555818345C22.gif" alt="Our First Valentines Together!">
+                    <img src="IMG_2527.jpeg" alt="Our First Valentines Together!" onclick="openImage(this)">
+                    <img src="B5EEDD76-811E-426B-AA7C-555818345C22.gif" alt="Our First Valentines Together!" onclick="openImage(this)">
                   </div>
                   <div class="caption">Our First Valentines Together!</div>
                 </div>
                 
                <div class="memory">
                   <div class="multi-image">
-                    <img src="IMG_2533.jpeg" alt="Her Collection 🫣">
-                    <img src="IMG_9246.jpeg" alt="Her Collection 🫣">
-                    <img src="8BFFF4C1-D51F-4D19-AA46-B3A4E0788B68.gif" alt="Her Collection 🫣">
-                    <img src="IMG_9649-preview.JPG" alt="Her Collection 🫣">
-                    <img src="IMG_2826.jpeg" alt="Her Collection 🫣">
-                    <img src="IMG_2900.jpeg" alt="Her Collection 🫣">
-                    <img src="IMG_2959.jpeg" alt="Her Collection 🫣">
-                    <img src="IMG_3305.jpg" alt="Her Collection 🫣">
-                    <img src="IMG_3307.JPG" alt="Her Collection 🫣">
+                    <img src="IMG_2533.jpeg" alt="Her Collection 🫣" onclick="openImage(this)">
+                    <img src="IMG_9246.jpeg" alt="Her Collection 🫣" onclick="openImage(this)">
+                    <img src="8BFFF4C1-D51F-4D19-AA46-B3A4E0788B68.gif" alt="Her Collection 🫣" onclick="openImage(this)">
+                    <img src="IMG_9649-preview.JPG" alt="Her Collection 🫣" onclick="openImage(this)">
+                    <img src="IMG_2826.jpeg" alt="Her Collection 🫣" onclick="openImage(this)">
+                    <img src="IMG_2900.jpeg" alt="Her Collection 🫣" onclick="openImage(this)">
+                    <img src="IMG_2959.jpeg" alt="Her Collection 🫣" onclick="openImage(this)">
+                    <img src="IMG_3305.jpg" alt="Her Collection 🫣" onclick="openImage(this)">
+                    <img src="IMG_3307.JPG" alt="Her Collection 🫣" onclick="openImage(this)">
                   </div>
                   <div class="caption">Her Collection 🫣</div>
                 </div>
                 
                                 
-                <div class="memory"><img src="IMG_9245.jpeg"><div class="caption">Kensington ain't got NOTHING on us!</div></div>
-                <div class="memory"><img src="65B834F1-9B00-4B20-8B11-4468F3C74E9B.gif"><div class="caption">Matching permanent bracelets!</div></div>
+                <div class="memory"><img src="IMG_9245.jpeg" onclick="openImage(this)"><div class="caption">Kensington ain't got NOTHING on us!</div></div>
+                <div class="memory"><img src="65B834F1-9B00-4B20-8B11-4468F3C74E9B.gif" onclick="openImage(this)"><div class="caption">Matching permanent bracelets!</div></div>
                 
                 <div class="memory">
                   <div class="multi-image">
-                    <img src="IMG_2621.jpeg" alt="Held at gunpoint">
-                    <img src="IMG_2620.jpeg" alt="Held at gunpoint">
+                    <img src="IMG_2621.jpeg" alt="Held at gunpoint" onclick="openImage(this)">
+                    <img src="IMG_2620.jpeg" alt="Held at gunpoint" onclick="openImage(this)">
                   </div>
                   <div class="caption">Held at gunpoint</div>
                 </div>
                 
-                <div class="memory"><img src="IMG_2587.jpeg"><div class="caption">Gala was so fun</div></div>
-                <div class="memory"><img src="IMG_4053 2.jpg"><div class="caption">They call us napolitan icecream without the strawberry</div></div>
+                <div class="memory"><img src="IMG_2587.jpeg" onclick="openImage(this)"><div class="caption">Gala was so fun</div></div>
+                <div class="memory"><img src="IMG_4053 2.jpg" onclick="openImage(this)"><div class="caption">They call us napolitan icecream without the strawberry</div></div>
                 
                 <div class="memory">
                   <div class="multi-image">
-                    <img src="IMG_2750.jpeg" alt="Baby Es and Baby Ary">
-                    <img src="453808048_7895573747178167_1668668457726970591_n.jpg" alt="Baby Es and Baby Ary">
+                    <img src="IMG_2750.jpeg" alt="Baby Es and Baby Ary" onclick="openImage(this)">
+                    <img src="453808048_7895573747178167_1668668457726970591_n.jpg" alt="Baby Es and Baby Ary" onclick="openImage(this)">
                   </div>
                   <div class="caption">Baby Es and Baby Ary</div>
                 </div>
 
                 
-                <div class="memory"><img src="IMG_2778.jpeg"><div class="caption">She loved the Raptors game 😎</div></div>
-                <div class="memory"><img src="ChatGPT Image Apr 19, 2025 at 10_59_49 AM.png"><div class="caption">This is what my life looks like with you</div></div>
-                <div class="memory"><img src="IMG_2865.jpeg"><div class="caption">Mid tornado btw</div></div>
-                <div class="memory"><img src="IMG_2899.jpeg"><div class="caption">Soooooo WHAT DO YOU THINK??</div></div>
-                <div class="memory"><img src="IMG_2798.png"><div class="caption">Buncha nerds</div></div>
-                <div class="memory"><img src="IMG_0025.jpeg"><div class="caption">Romeo and Juliet type activities</div></div>
-                <div class="memory"><img src="IMG_2960.jpeg"><div class="caption">On her</div></div>
+                <div class="memory"><img src="IMG_2778.jpeg" onclick="openImage(this)"><div class="caption">She loved the Raptors game 😎</div></div>
+                <div class="memory"><img src="ChatGPT Image Apr 19, 2025 at 10_59_49 AM.png" onclick="openImage(this)"><div class="caption">This is what my life looks like with you</div></div>
+                <div class="memory"><img src="IMG_2865.jpeg" onclick="openImage(this)"><div class="caption">Mid tornado btw</div></div>
+                <div class="memory"><img src="IMG_2899.jpeg" onclick="openImage(this)"><div class="caption">Soooooo WHAT DO YOU THINK??</div></div>
+                <div class="memory"><img src="IMG_2798.png" onclick="openImage(this)"><div class="caption">Buncha nerds</div></div>
+                <div class="memory"><img src="IMG_0025.jpeg" onclick="openImage(this)"><div class="caption">Romeo and Juliet type activities</div></div>
+                <div class="memory"><img src="IMG_2960.jpeg" onclick="openImage(this)"><div class="caption">On her</div></div>
               
                 <div class="memory">
                   <div class="multi-image">
-                    <img src="IMG_2904.jpeg" alt="Oblivious Queen">
-                    <img src="IMG_2905.jpeg" alt="Oblivious Queen">
+                    <img src="IMG_2904.jpeg" alt="Oblivious Queen" onclick="openImage(this)">
+                    <img src="IMG_2905.jpeg" alt="Oblivious Queen" onclick="openImage(this)">
                   </div>
                   <div class="caption">Oblivious Queen</div>
                 </div>
 
-                <div class="memory"><img src="IMG_3055.jpeg"><div class="caption">Cobourg was such a blast</div></div>
-                <div class="memory"><img src="IMG_3295.JPG"><div class="caption">Even when making puffer fish faces, she poses</div></div>
-                <div class="memory"><img src="IMG_3153.HEIC"><div class="caption">She's sooooo pretty</div></div>
+                <div class="memory"><img src="IMG_3055.jpeg" onclick="openImage(this)"><div class="caption">Cobourg was such a blast</div></div>
+                <div class="memory"><img src="IMG_3295.JPG" onclick="openImage(this)"><div class="caption">Even when making puffer fish faces, she poses</div></div>
+                <div class="memory"><img src="IMG_3153.HEIC" onclick="openImage(this)"><div class="caption">She's sooooo pretty</div></div>
               
        <section id="videos">
           <h2 class="video-heading">Our Vlogs</h2>
@@ -457,6 +477,22 @@
          heading.classList.add('big-black-heading');
         }
     </script>
+    
+    <div id="lightbox" onclick="closeImage()">
+      <img id="lightbox-img">
+    </div>
+   
+    <script>
+      function openImage(img) {
+        document.getElementById("lightbox-img").src = img.src;
+        document.getElementById("lightbox").style.display = "flex";
+      }
+    
+      function closeImage() {
+        document.getElementById("lightbox").style.display = "none";
+      }
+    </script>
+
 </body>
 </html>
 
