@@ -214,10 +214,11 @@
         }
 
         .memory img {
-          width: 100%;
-          height: 250px;
-          object-fit: cover;
-          border-radius: 10px;
+          height: 300px;           /* or any size you want */
+          width: 100%;             /* makes it fill the memory block width */
+          object-fit: cover;       /* ✅ keeps the aspect ratio, crops if needed */
+          border-radius: 10px;     /* optional: makes corners smooth */
+          display: block;
         }
 
         .multi-image img {
