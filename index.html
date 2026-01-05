@@ -172,14 +172,14 @@
         
         .video-wrapper {
           display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
+          flex-direction: column; /* 👈 forces new line */
+          align-items: center;
           gap: 40px;
         }
-        
+
         .video-wrapper iframe {
           width: 280px;
-          height: 200px;
+          height: 100px;
           border-radius: 12px;
           border: none;
           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
