@@ -171,15 +171,18 @@
         }
         
         .video-wrapper {
-          display: flex;
-          flex-direction: column; /* 👈 forces new line */
-          align-items: center;
-          gap: 40px;
+          display: flex !important;
+          flex-direction: column !important;
+          flex-wrap: nowrap !important;
+          align-items: center !important;
+          gap: 40px !important;
         }
 
         .video-wrapper iframe {
-          width: 280px;
-          height: 100px;
+          width: min(720px, 100%);
+          aspect-ratio: 16 / 9;
+          height: auto;
+          display: block;
           border-radius: 12px;
           border: none;
           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
