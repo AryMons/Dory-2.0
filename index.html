@@ -55,15 +55,14 @@
         }
 
         section {
-        section {
           background: #002b5c;
           border-radius: 10px;
           padding: 1.5em;
           color: #dcdcdc;
-          margin: 1.5em auto;        /* ← Centers the block horizontally */
+          margin: 1.5em auto;        /* ← this will now work properly */
           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
           width: 100%;
-          max-width: 1200px;         /* ← Keep it same width */
+          max-width: 1200px;         /* keeps layout from going too wide */
         }
 
         section h2 {
@@ -219,16 +218,13 @@
         }
         
         .memory img {
-          height: 300px;           /* or any size you want */
-          width: 100%;             /* makes it fill the memory block width */
-          object-fit: cover;       /* ✅ keeps the aspect ratio, crops if needed */
-          border-radius: 20px;     /* optional: makes corners smooth */
-          width: 300px !important;
-          height: 1000px !important;              /* FIXED HEIGHT FOR ALL IMAGES */
-          object-fit: cover !important;          /* Crop to fit box without stretching */
-          display: block;
+          width: 100%;
+          height: auto;
+          max-height: 400px;
+          border-radius: 12px;
+          object-fit: cover;
         }
-
+        
         .multi-image img {
           height: 150px; /* Smaller height for multiple images */
           max-width: 48%;
