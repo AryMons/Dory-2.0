@@ -372,6 +372,39 @@
     #special {
         border: 2px solid rgba(255, 255, 255, 0.35);
     }
+
+    /* Confetti explosion on the surprise button */
+    .confetti-piece {
+        position: fixed;
+        opacity: 0.95;
+        pointer-events: none;
+        z-index: 2000;
+    }
+
+    .confetti-emoji {
+        position: fixed;
+        font-size: 20px;
+        pointer-events: none;
+        z-index: 2000;
+    }
+
+    .confetti-shockwave {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        margin-left: -10px;
+        margin-top: -10px;
+        border-radius: 50%;
+        border: 3px solid rgba(255, 255, 255, 0.85);
+        pointer-events: none;
+        z-index: 1999;
+        animation: shockwave-expand 0.6s ease-out forwards;
+    }
+
+    @keyframes shockwave-expand {
+        0% { transform: scale(0); opacity: 0.9; }
+        100% { transform: scale(16); opacity: 0; }
+    }
     </style>
 </head>
     <style>
@@ -669,6 +702,82 @@
             if (heading) {
               heading.classList.add('big-black-heading');
             }
+
+            launchConfetti();
+          }
+
+          function launchConfetti() {
+            const button = document.querySelector('.button');
+            const rect = button ? button.getBoundingClientRect() : { left: window.innerWidth / 2, top: window.innerHeight / 2, width: 0, height: 0 };
+            const originX = rect.left + rect.width / 2;
+            const originY = rect.top + rect.height / 2;
+
+            spawnShockwave(originX, originY);
+
+            const waveDelays = [0, 120, 260];
+            waveDelays.forEach((delay) => {
+              setTimeout(() => {
+                for (let i = 0; i < 90; i++) {
+                  spawnConfettiPiece(originX, originY);
+                }
+              }, delay);
+            });
+          }
+
+          function spawnShockwave(x, y) {
+            const ring = document.createElement('div');
+            ring.className = 'confetti-shockwave';
+            ring.style.left = x + 'px';
+            ring.style.top = y + 'px';
+            document.body.appendChild(ring);
+            setTimeout(() => ring.remove(), 700);
+          }
+
+          function spawnConfettiPiece(x, y) {
+            const colors = ['#ff6fae', '#ffd166', '#66ccff', '#ff8fa3', '#c77dff', '#ffffff', '#7CFFB2'];
+            const emojis = ['🌸', '💐', '🌷', '✨', '💖'];
+            const useEmoji = Math.random() < 0.12;
+
+            const el = document.createElement('div');
+
+            if (useEmoji) {
+              el.className = 'confetti-emoji';
+              el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            } else {
+              el.className = 'confetti-piece';
+              const isCircle = Math.random() > 0.4;
+              const size = 6 + Math.random() * 10;
+              el.style.width = size + 'px';
+              el.style.height = (isCircle ? size : size * 0.35) + 'px';
+              el.style.background = colors[Math.floor(Math.random() * colors.length)];
+              el.style.borderRadius = isCircle ? '50%' : '2px';
+            }
+
+            el.style.left = x + 'px';
+            el.style.top = y + 'px';
+            document.body.appendChild(el);
+
+            const angle = Math.random() * Math.PI * 2;
+            const distance = 140 + Math.random() * 320;
+            const midX = Math.cos(angle) * distance;
+            const midY = Math.sin(angle) * distance - 100;
+            const endX = midX + (Math.random() * 100 - 50);
+            const endY = midY + 320 + Math.random() * 240;
+            const rot = Math.random() * 900 - 450;
+
+            const animation = el.animate(
+              [
+                { transform: 'translate(0px, 0px) rotate(0deg)', opacity: 1 },
+                { transform: `translate(${midX}px, ${midY}px) rotate(${rot / 2}deg)`, opacity: 1, offset: 0.4 },
+                { transform: `translate(${endX}px, ${endY}px) rotate(${rot}deg)`, opacity: 0 }
+              ],
+              {
+                duration: 1900 + Math.random() * 1000,
+                easing: 'cubic-bezier(0.25, 0.65, 0.35, 1)'
+              }
+            );
+
+            animation.onfinish = () => el.remove();
           }
         
           function openImage(img) {
