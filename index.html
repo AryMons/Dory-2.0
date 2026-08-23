@@ -707,10 +707,8 @@
           }
 
           function launchConfetti() {
-            const button = document.querySelector('.button');
-            const rect = button ? button.getBoundingClientRect() : { left: window.innerWidth / 2, top: window.innerHeight / 2, width: 0, height: 0 };
-            const originX = rect.left + rect.width / 2;
-            const originY = rect.top + rect.height / 2;
+            const originX = window.innerWidth / 2;
+            const originY = window.innerHeight / 2;
 
             spawnShockwave(originX, originY);
 
